@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>xAPI Launch</title></head>
+<body>
+<div id="xapi-container" style="width:100%; height:600px; border:1px solid #ccc;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/xapi-launch-kit@latest/dist/xapi-launch-kit.min.js"></script>
+<script>
+  const lrs = {
+    endpoint: "https://xapi-trial.lrs.io/xapi/",
+    username: "b230d127-b634-4baf-91da-e919808feb48",
+    password: "98aa4893-4bcb-b187-cda4501968e6"
+  };
+
+  const launchLink = "https://cluelessitstudent.github.io/xample/";
+
+  xapiLaunchKit.launch({
+    launchUrl: launchLink,
+    lrs: lrs,
+    actor: {
+      name: "Leroy1",
+      mbox: "mailto:l.biscoro@yahoo.com"
+    },
+    target: '#xapi-container'
+  });
+</script>
+</body>
+</html>
